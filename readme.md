@@ -1,3 +1,7 @@
+## install
+```
+composer require osi/des
+```
 ## config
 ```
 #config/app.php
