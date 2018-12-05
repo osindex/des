@@ -18,6 +18,18 @@
         "psr-4":
         {
             "Osi\\Des\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "extra":
+    {
+        "laravel":
+        {
+            "providers": [
+                "Osi\\Des\\DesServiceProvider"
+            ]
         }
     }
 }

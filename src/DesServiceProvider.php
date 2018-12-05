@@ -21,14 +21,19 @@ class DesServiceProvider extends ServiceProvider {
 	 */
 	public function register() {
 		// 在容器中注册
-		$this->app->singleton('des', function () {
+		$this->app->singleton('Des', function () {
+			$res = env('DES_RES', 'base64');
+			$mode = env('DES_MODE', 'des-ecb');
 			$key = env('DES_KEY', null);
-			return new Des($key);
+			// $iv = env('DES_IV', null); ecb不需要
+			return new Des($mode, $res, $key);
 		});
-		$this->app->singleton('des3', function () {
+		$this->app->singleton('Des3', function () {
+			$res = env('DES_RES', 'base64');
+			$mode = env('DES3_MODE', 'des-ede3-cbc');
 			$key = env('DES_KEY', null);
 			$iv = env('DES_IV', null);
-			return new Des3($key, $iv);
+			return new Des3($mode, $res, $key, $iv);
 		});
 	}
 	/**
@@ -37,6 +42,6 @@ class DesServiceProvider extends ServiceProvider {
 	 * @return array
 	 */
 	public function provides() {
-		return ['des', 'des3'];
+		return ['Des', 'Des3'];
 	}
 }

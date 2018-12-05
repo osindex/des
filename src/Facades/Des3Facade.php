@@ -5,6 +5,6 @@ use Illuminate\Support\Facades\Facade;
 
 class Des3Facade extends Facade {
 	protected static function getFacadeAccessor() {
-		return 'des3';
+		return 'Des3';
 	}
 }
