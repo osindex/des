@@ -1,0 +1,23 @@
+{
+    "name": "osi/des",
+    "description": "des,3des for laravel",
+    "type": "library",
+    "require":
+    {
+        "lib-openssl": ">=1.0.0",
+        "php": ">=5.4"
+    },
+    "license": "mit",
+    "authors": [
+    {
+        "name": "osi",
+        "email": "yaoiluo@gmail.com"
+    }],
+    "autoload":
+    {
+        "psr-4":
+        {
+            "Osi\\Des\\": "src/"
+        }
+    }
+}
