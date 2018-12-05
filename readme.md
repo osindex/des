@@ -16,6 +16,12 @@ Osi\Des\DesServiceProvider::class,
 ## init
 ```
 #.env
+#.env
+DES_MODE=des-ecb
+DES3_MODE=des-ede3-cbc
+
+DES_RES=
+// base64,hex,''
 DES_KEY=FFFFFFFFFFFFFFFFFFFFFFFF
 DES_IV=FFFFFFFF
 ```
